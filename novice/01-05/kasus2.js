@@ -1,0 +1,1 @@
+let cari = new myMap();

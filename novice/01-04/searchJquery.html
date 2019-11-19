@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar JS</title>
+	<style type="text/css">
+		body {padding: 20px;}
+input {margin-bottom: 5px; padding: 2px 3px; width: 209px;}
+td {padding: 4px; border: 1px #CCC solid; width: 100px;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <input type="text" id="search" placeholder="Type to search">
+    <div class="demo"></div>
+    <div class="mypanel"></div>
+    <table id="table">
+    <thead>
+        <tr>
+            <th>Nama</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<script>
+    $.getJSON('https://jsonplaceholder.typicode.com/users', function(data) {
+        console.log(data);
+        let dataditabel= '';
+        for(const ite of data) {
+            dataditabel += `
+                <tr>
+                    <td style="width: 300px;">${ite.name}</td>    
+                    <td style="width: 300px;">${ite.username}</td>    
+                </tr>
+            `;
+        }
+        $("#table tbody").html(dataditabel);
+    });
+</script>
+<script type="text/javascript">
+	let $rows = $('#table tbody');
+    
+    $('#search').keyup(function(){
+        let val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+        $rows.show().filter(function() {
+            let text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+            return !~text.indexOf(val);
+        }).hide();
+    });
+</script>
+</body>
+</html>
