@@ -10,7 +10,7 @@ let data = {
     users: function() {
         axios.get('https://jsonplaceholder.typicode.com/users')
         .then(function(res) {
-            console.log(res);
+            console.log(res.data);
         })
         .catch(function(err) {
             console.log(err);

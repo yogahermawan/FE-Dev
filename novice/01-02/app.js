@@ -1,3 +1,5 @@
+var nilai = []
+
 try {
   try {
     throw new Error('input salah!'); //error bisa terserah kita

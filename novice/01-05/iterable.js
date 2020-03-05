@@ -1,7 +1,7 @@
 //using browser
 let range = {
-    from = 1,
-    to = 4,
+    from : 1,
+    to : 4,
 
     [Symbol.iterator]() {
         this.current = this.from;

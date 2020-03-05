@@ -1,14 +1,25 @@
-var myMap = new Map(); // bisa sama / berbeda
-var mySet = new Set();
-var keyString = "a string",
-    keyObj = {},
-    keyFunc = function () {};
+var myMap = new Map();// bisa sama / berbeda
+myMap.set("buah", "nanas");
+myMap.set("buah", "nanas");
+myMap.get("buah");
+myMap.delete("buah");
 
-mySet.set(1, "satu");
-mySet.set(2, "dua");
-// mySet.set(1, "satulagi");
+var myWeakMap = new WeakMap();
+myWeakMap.set(1, "oke");
+myWeakMap.set(1, "oke");
 
-console.log(mySet.get(1));
+console.log(myWeakMap.get(1));
+
+// var mySet = new Set();
+// var keyString = "a string",
+//     keyObj = {},
+//     keyFunc = function () {};
+
+// mySet.set(1, "satu");
+// mySet.set(2, "dua");
+// // mySet.set(1, "satulagi");
+
+// console.log(mySet.get(1));
 
 // // setting the values
 // myMap.set("sapi", "cow");

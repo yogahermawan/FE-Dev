@@ -6,7 +6,6 @@ let data = [
     {nama: "tomi"}
 ];
 
-
 let hewan = "sapi";
 let buah = 'nanas';
 let buah2 = '3';
@@ -16,8 +15,7 @@ let tumbuhan1 = `4`;
 let tumbuhan2 = `4`;
 let tampung = hewan+buah;
 
-
 console.log(tampung.toUpperCase());
 
-console.log(nambah=tumbuhan1+tumbuhan2);
+console.log(nambah=tumbuhan1-tumbuhan2);
 
