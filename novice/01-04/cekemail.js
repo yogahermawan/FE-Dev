@@ -17,7 +17,7 @@ getDiceAnswer().then(answer => {
     lines.push(answer);
     console.log(lines);
     // console.log(answer);
-    var re = /[\w-]+@([\w-]+\.)+[\w-]+$/i;
+    var re = /[\w+]+@([\w+]+\.)+[\w+]+$/;
     var rgname = /([^@]*)/;
     var rgtld = /[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/;
     function CheckEmail(answer) {
