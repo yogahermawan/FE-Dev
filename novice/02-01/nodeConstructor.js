@@ -2,7 +2,7 @@
 var Person = function(name) {
     this.name = name;
     this.canTalk = true;
-  };
+};
   
   //prototype based
   Person.prototype.greet = function() {
